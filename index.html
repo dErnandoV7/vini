@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pesquisa</title>
+
+    <!-- link css -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- js -->
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <img src="img/logo.png" alt="Logo" />
+      <p>Preencha os campos abaixo para darmos inicio a pesquisa.</p>
+      <div class="form-container">
+        <form>
+          <div class="input-group">
+            <label for="name">Nome:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Insira seu nome"
+            />
+          </div>
+          <div class="input-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Insira seu email"
+            />
+          </div>
+          <div class="input-group">
+            <label for="cpf">CPF:</label>
+            <input
+              type="text"
+              oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+              name="cpf"
+              placeholder="Insira seu CPF"
+              id="cpf"
+              maxlength="11"
+            />
+          </div>
+        </form>
+        <div class="form-control">
+          <button type="button">Enviar</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
